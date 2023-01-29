@@ -6,7 +6,7 @@ function Layout({ children, ...props }: Props) {
   return (
     <main
       {...props}
-      className={"min-h-screen bg-black text-white pb-16".concat(
+      className={"min-h-screen bg-black text-white pb-16 px-4".concat(
         " ",
         props?.className ?? ""
       )}
@@ -17,7 +17,11 @@ function Layout({ children, ...props }: Props) {
         <footer className="mt-8 text-stone-500">
           <p>
             Made with Vite, Tailwind and hosted on Vercel, this project is{" "}
-            <a href="https://github.com/guilherssousa/as-bump" target="_blank">
+            <a
+              href="https://github.com/guilherssousa/as-bump"
+              target="_blank"
+              className="text-stone-300"
+            >
               open source
             </a>{" "}
             and not affiliated with Adult Swim. Adult Swim is a trademark of
