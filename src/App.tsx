@@ -1,4 +1,5 @@
 import Layout from "./components/Layout";
+import Frame from "./components/Frame";
 
 function App() {
   return (
@@ -8,19 +9,21 @@ function App() {
         Because everyone wants to mock [as] aesthetic.
       </p>
 
+      <Frame />
+
       <section className="mt-16">
         <div className="text-center">
           <h2 className="text-4xl font-semibold">What's a bump?</h2>
           <blockquote
             cite="Someone at [as]"
-            className="text-lg mt-2 text-neutral-400 font-normal"
+            className="text-lg mt-2 text-stone-400 font-normal"
           >
             Are you lurking the internet for coming here and not knowing what a
             bumper is? ~ [as] staff
           </blockquote>
         </div>
 
-        <div className="text-lg mt-4 text-justify text-neutral-200">
+        <div className="text-lg mt-4 text-justify text-stone-200">
           <p>
             In broadcasting, a commercial bumper, ident bumper, or break-bumper
             (often shortened to bump){" "}
