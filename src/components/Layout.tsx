@@ -6,12 +6,12 @@ function Layout({ children, ...props }: Props) {
   return (
     <main
       {...props}
-      className={"min-h-screen bg-black text-white".concat(
+      className={"min-h-screen bg-black text-white pb-16".concat(
         " ",
         props?.className ?? ""
       )}
     >
-      <div className="max-w-screen-lg mx-auto pt-16 flex items-center flex-col">
+      <div className="max-w-screen-xl mx-auto pt-16 flex items-center flex-col">
         {children}
       </div>
     </main>
