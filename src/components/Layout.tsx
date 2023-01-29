@@ -13,6 +13,18 @@ function Layout({ children, ...props }: Props) {
     >
       <div className="max-w-screen-xl mx-auto pt-16 flex items-center flex-col">
         {children}
+
+        <footer className="mt-8 text-stone-500">
+          <p>
+            Made with Vite, Tailwind and hosted on Vercel, this project is{" "}
+            <a href="https://github.com/guilherssousa/as-bump" target="_blank">
+              open source
+            </a>{" "}
+            and not affiliated with Adult Swim. Adult Swim is a trademark of
+            Turner Broadcasting System, Inc. All rights reserved. (turner pls
+            don't sue me)
+          </p>
+        </footer>
       </div>
     </main>
   );
