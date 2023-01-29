@@ -1,11 +1,13 @@
+import Layout from "./components/Layout";
+
 function App() {
   return (
-    <div className="App">
+    <Layout>
       <div>
         <h1>[adult swim bump generator]</h1>
         <p>Because everyone wants to mock [as] aesthetic.</p>
       </div>
-    </div>
+    </Layout>
   );
 }
 
