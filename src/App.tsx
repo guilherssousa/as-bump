@@ -4,7 +4,18 @@ import Frame from "./components/Frame";
 function App() {
   return (
     <Layout>
-      <h1 className="text-5xl font-semibold">[adult swim bump generator]</h1>
+      <h1 className="text-5xl font-semibold flex items-end gap-x-4">
+        <span>[adult swim bump generator]</span>{" "}
+        <a href="https://github.com/guilherssousa/as-bump">
+          <img
+            src="/github.svg"
+            alt="The link to the repo"
+            className="w-6 h-6"
+            height={24}
+            width={24}
+          />
+        </a>
+      </h1>
       <p className="mt-4 text-xl">
         Because everyone wants to mock [as] aesthetic.
       </p>
