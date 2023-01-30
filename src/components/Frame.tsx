@@ -1,6 +1,7 @@
 import { fabric } from "fabric";
 import { FabricJSCanvas, useFabricJSEditor } from "fabricjs-react";
 
+// Lorem is a list of texts that imitate the style of Adult Swim bumpers.
 const lorem = [
   "Code is poetry, but debugging is haiku.",
   "Debugging is like being a detective in a crime movie where you're also the murderer.",
@@ -12,6 +13,7 @@ const lorem = [
   "Work smarter, not harder... unless you're a computer, then just work harder.",
   "Life is like a box of chocolates, full of bugs and unexpected crashes.",
   "The road to success is always under construction, just like your code.",
+  "It doesn't matter how well can you see, you'll always forget a semicolon.",
 ];
 
 // The frame should render a 720px video aspect ratio.
@@ -22,7 +24,7 @@ function Frame() {
   const addTextNode = (_canvas?: fabric.Canvas) => {
     const defaultText = lorem[Math.floor(Math.random() * lorem.length) + 1];
 
-    const text = new fabric.Text(defaultText, {
+    const text = new fabric.IText(defaultText, {
       fontFamily: "HelveticaNeue Condensed",
       fontSize: 32,
       fill: "#fff",
@@ -42,6 +44,19 @@ function Frame() {
   const clearCanvas = () => {
     canvas.clear();
     canvas.setBackgroundColor("#000", () => {});
+  };
+
+  const saveAsJpeg = () => {
+    const dataURL = canvas.toDataURL({
+      format: "jpeg",
+      quality: 1,
+      multiplier: 1,
+    });
+
+    const link = document.createElement("a");
+    link.download = "adult-swim-bumper.jpeg";
+    link.href = dataURL;
+    link.click();
   };
 
   const handleLoadCanvas = (canvas: fabric.Canvas) => {
@@ -73,6 +88,12 @@ function Frame() {
           className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
         >
           Add new Text
+        </button>
+        <button
+          onClick={() => saveAsJpeg()}
+          className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
+        >
+          Save as JPEG
         </button>
       </div>
     </section>
