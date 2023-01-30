@@ -69,6 +69,21 @@ function Frame() {
     addTextNode(canvas);
   };
 
+  const buttons = [
+    {
+      text: "Clear Canvas",
+      onClick: () => clearCanvas(),
+    },
+    {
+      text: "Add new Text",
+      onClick: () => addTextNode(),
+    },
+    {
+      text: "Save as JPEG",
+      onClick: () => saveAsJpeg(),
+    },
+  ];
+
   return (
     <section className="w-full">
       <FabricJSCanvas
@@ -77,24 +92,15 @@ function Frame() {
       />
 
       <div className="mt-2 flex items-center gap-x-2">
-        <button
-          onClick={() => clearCanvas()}
-          className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
-        >
-          Clear Canvas
-        </button>
-        <button
-          onClick={() => addTextNode()}
-          className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
-        >
-          Add new Text
-        </button>
-        <button
-          onClick={() => saveAsJpeg()}
-          className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
-        >
-          Save as JPEG
-        </button>
+        {buttons.map((button) => (
+          <button
+            key={button.text}
+            onClick={button.onClick}
+            className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
+          >
+            {button.text}
+          </button>
+        ))}
       </div>
     </section>
   );
