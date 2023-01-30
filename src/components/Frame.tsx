@@ -22,7 +22,7 @@ function Frame() {
   const canvas = editor?.canvas as fabric.Canvas;
 
   const addTextNode = (_canvas?: fabric.Canvas) => {
-    const defaultText = lorem[Math.floor(Math.random() * lorem.length) + 1];
+    const defaultText = lorem[Math.floor(Math.random() * lorem.length)];
 
     const text = new fabric.IText(defaultText, {
       fontFamily: "HelveticaNeue Condensed",
