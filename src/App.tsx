@@ -4,13 +4,13 @@ import Frame from "./components/Frame";
 function App() {
   return (
     <Layout>
-      <h1 className="text-5xl font-semibold flex items-end gap-x-2">
+      <h1 className="text-3xl md:text-5xl font-semibold flex items-end gap-x-2">
         <span>[adult swim bump generator]</span>{" "}
         <a href="https://github.com/guilherssousa/as-bump" target="_blank">
           <img
             src="/github.svg"
             alt="The repo for this aMaZiNg project"
-            className="w-6 h-6"
+            className="w-4 h-4 sm:w-6 sm:h-6"
           />
         </a>
       </h1>

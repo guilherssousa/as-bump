@@ -87,7 +87,7 @@ function Frame() {
   return (
     <section className="w-full">
       <FabricJSCanvas
-        className="rounded-md border bg-white border-stone-900 mt-8 overflow-hidden"
+        className="rounded-md border bg-white border-stone-900 mt-8 overflow-hidden aspect-video w-full h-auto"
         onReady={handleLoadCanvas}
       />
 
