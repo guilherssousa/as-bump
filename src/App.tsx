@@ -80,6 +80,37 @@ function App() {
             </span>
           </p>
         </div>
+
+        <div className="text-center mt-8">
+          <h2 className="text-4xl font-semibold">How to contribute</h2>
+          <blockquote
+            cite="Someone at [as]"
+            className="text-lg mt-2 text-stone-400 font-normal"
+          >
+            There are a ton of useful repositories to contribute to and you're
+            here, loser. ~ [as] staff
+          </blockquote>
+
+          <div className="text-lg mt-4 text-justify text-stone-200">
+            <p>
+              The project is fully open source{" "}
+              <span className="font-semibold text-white">
+                <a href="https://github.com/guilherssousa/as-bump">
+                  fully open source hosted on GitHub
+                </a>
+              </span>{" "}
+              so you are free to mess up with the code as you want. If you think
+              you have the brain to improve this code masterpiece, you might be{" "}
+              <s>a good fit for a maniac</s> interested in sharing your vast
+              knowledge with the world (Population: 3) by opening a pull request
+              on the repo. Talking seriously, please take considering that this
+              is not a official Adult Swim project and I'm not affiliated with
+              them in any way. I just wanted to have some fun and I'm not
+              responsible for any damage or weird shit you might do with this
+              project.
+            </p>
+          </div>
+        </div>
       </section>
     </Layout>
   );
