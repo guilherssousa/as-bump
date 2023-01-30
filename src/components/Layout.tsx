@@ -16,13 +16,14 @@ function Layout({ children, ...props }: Props) {
 
         <footer className="mt-8 text-stone-500">
           <p>
-            Made with Vite, Tailwind and hosted on Vercel, this project is{" "}
+            Made with Vite, Fabric, Tailwind and hosted on Vercel, this project
+            is{" "}
             <a
               href="https://github.com/guilherssousa/as-bump"
               target="_blank"
               className="text-stone-300"
             >
-              open source
+              open source developed by Guilherme Sousa
             </a>{" "}
             and not affiliated with Adult Swim. Adult Swim is a trademark of
             Turner Broadcasting System, Inc. All rights reserved. (turner pls
