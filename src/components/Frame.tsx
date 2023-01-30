@@ -19,7 +19,7 @@ function Frame() {
   const { onReady, editor } = useFabricJSEditor();
   const canvas = editor?.canvas as fabric.Canvas;
 
-  const addTextNode = () => {
+  const addTextNode = (_canvas?: fabric.Canvas) => {
     const defaultText = lorem[Math.floor(Math.random() * lorem.length) + 1];
 
     const text = new fabric.Text(defaultText, {
@@ -28,9 +28,15 @@ function Frame() {
       fill: "#fff",
       fontWeight: "bold",
       top: 720 / 2 - 32 / 2,
+      left: 1280 / 2 - defaultText.length * 6,
     });
 
-    canvas.add(text);
+    if (!_canvas) {
+      canvas.add(text);
+      return;
+    }
+
+    _canvas.add(text);
   };
 
   const clearCanvas = () => {
@@ -45,25 +51,25 @@ function Frame() {
     });
     canvas.setBackgroundColor("#000", () => {});
     onReady(canvas);
-    // addTextNode();
+    addTextNode(canvas);
   };
 
   return (
     <section className="w-full">
       <FabricJSCanvas
-        className="rounded-md border bg-white border-stone-900 mt-8"
+        className="rounded-md border bg-white border-stone-900 mt-8 overflow-hidden"
         onReady={handleLoadCanvas}
       />
 
       <div className="mt-2 flex items-center gap-x-2">
         <button
-          onClick={clearCanvas}
+          onClick={() => clearCanvas()}
           className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
         >
           Clear Canvas
         </button>
         <button
-          onClick={addTextNode}
+          onClick={() => addTextNode()}
           className="border px-3 font-semibold py-2 rounded-md border-stone-900 text-stone-400"
         >
           Add new Text
